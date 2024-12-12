@@ -13,7 +13,7 @@ def set_orders(producer, topic_name, data_generator):
 
     try:
         for i, fraud_data in enumerate(data_generator):
-            is_fraud = fraud_data["is-Fraud"]  # Determine fraud status
+            is_fraud = fraud_data["isFraud"]  # Determine fraud status
 
             producer.send(topic_name, key=str(is_fraud), value=fraud_data)
             print(f"Produced record {i} to topic '{topic_name}' with key '{is_fraud}'.")
