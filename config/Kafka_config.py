@@ -32,8 +32,6 @@ def get_kafka_producer():
             request_timeout_ms=10000,
             linger_ms=5,
             batch_size=32000,
-            partitioner=lambda key, all_partitions, available_partitions: hash(key)
-            % len(all_partitions),  #!sofy
         )
     except Exception as e:
         logging.error(f"Error creating Kafka producer: {e}")
