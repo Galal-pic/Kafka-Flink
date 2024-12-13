@@ -9,7 +9,7 @@ This project demonstrates a real-time pipeline using Kafka for message streaming
 1. **Producer**: Reads data from a CSV file and streams it to a Kafka topic.
 2. **Consumer**: Consumes messages, applies predictions, and inserts them into a MySQL database.
 3. **Database**: MySQL stores the processed data.
-4. **Machine Learning**: Pre-trained model predicts fraud likelihood.
+4. **Machine Learning**: Pre-trained model predicts fraud likelihood .
 
 ---
 

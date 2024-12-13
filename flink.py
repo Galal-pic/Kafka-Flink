@@ -23,7 +23,4 @@ result = data.map(MyMapFunction())
 # Collect results
 result.print()
 
-try:
-    env.execute("Python Map Function Example")
-except Exception as e:
-    print(f"Execution error: {e}")
+env.execute("Python Map Function Example")
