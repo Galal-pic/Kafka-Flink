@@ -3,14 +3,13 @@ import time
 import logging
 
 
-def fraudulent_data_generator(file_path):
+def data_generator(file_path):
     df = pd.read_csv(file_path)
     for _, row in df.iterrows():
         yield row.to_dict()
 
 
-def set_orders(producer, topic_name, data_generator):
-
+def send_orders(producer, topic_name, data_generator):
     try:
         for i, fraud_data in enumerate(data_generator):
             is_fraud = fraud_data["isFraud"]  # Determine fraud status

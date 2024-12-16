@@ -4,8 +4,6 @@ from pyflink.common.serialization import SimpleStringSchema
 from pyflink.common.typeinfo import Types
 from pyflink.datastream.data_stream import WatermarkStrategy
 
-from pyflink.common import Configuration
-
 
 def kafka_job():
     env = StreamExecutionEnvironment.get_execution_environment()
