@@ -1,12 +1,12 @@
 from config.kafka import get_kafka_producer
-from .fraud_data_generator import data_generator, send_orders
+from .fraud_data_generator import TransactionsData_json, send_orders
 
 
 def main():
     # load_dataset
-    topic_name = "topic1"
-    file_path = r"dataset\fraud-dataset.csv"
-    fraudulent_dataset_generator = data_generator(file_path=file_path)
+    topic_name = "t1"
+    file_path = r"dataset\Transactions.json"
+    fraudulent_dataset_generator = TransactionsData_json(file_path=file_path)
     producer = get_kafka_producer()
 
     # !create a new topic (if not already created)
